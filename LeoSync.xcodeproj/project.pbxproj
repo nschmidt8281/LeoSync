@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */; };
+		CA04D4FA1FC5B8FC001DCD9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */; };
+		CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */; };
+		CA04D5001FC5B8FC001DCD9E /* LeoSync.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */; };
+		CA04D5021FC5B8FC001DCD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */; };
+		CA04D5051FC5B8FC001DCD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CA04D4F41FC5B8FC001DCD9E /* LeoSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA04D4FC1FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeoSync.xcdatamodel; sourceTree = "<group>"; };
+		CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA04D5041FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA04D5061FC5B8FC001DCD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA04D4F11FC5B8FC001DCD9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA04D4EB1FC5B8FC001DCD9E = {
+			isa = PBXGroup;
+			children = (
+				CA04D4F61FC5B8FC001DCD9E /* LeoSync */,
+				CA04D4F51FC5B8FC001DCD9E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA04D4F51FC5B8FC001DCD9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA04D4F41FC5B8FC001DCD9E /* LeoSync.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA04D4F61FC5B8FC001DCD9E /* LeoSync */ = {
+			isa = PBXGroup;
+			children = (
+				CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */,
+				CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */,
+				CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */,
+				CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */,
+				CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */,
+				CA04D5061FC5B8FC001DCD9E /* Info.plist */,
+				CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */,
+			);
+			path = LeoSync;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA04D4F31FC5B8FC001DCD9E /* LeoSync */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA04D5091FC5B8FC001DCD9E /* Build configuration list for PBXNativeTarget "LeoSync" */;
+			buildPhases = (
+				CA04D4F01FC5B8FC001DCD9E /* Sources */,
+				CA04D4F11FC5B8FC001DCD9E /* Frameworks */,
+				CA04D4F21FC5B8FC001DCD9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeoSync;
+			productName = LeoSync;
+			productReference = CA04D4F41FC5B8FC001DCD9E /* LeoSync.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA04D4EC1FC5B8FC001DCD9E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "408 Industries";
+				TargetAttributes = {
+					CA04D4F31FC5B8FC001DCD9E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CA04D4EF1FC5B8FC001DCD9E /* Build configuration list for PBXProject "LeoSync" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA04D4EB1FC5B8FC001DCD9E;
+			productRefGroup = CA04D4F51FC5B8FC001DCD9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA04D4F31FC5B8FC001DCD9E /* LeoSync */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA04D4F21FC5B8FC001DCD9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA04D5051FC5B8FC001DCD9E /* LaunchScreen.storyboard in Resources */,
+				CA04D5021FC5B8FC001DCD9E /* Assets.xcassets in Resources */,
+				CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA04D4F01FC5B8FC001DCD9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA04D5001FC5B8FC001DCD9E /* LeoSync.xcdatamodeld in Sources */,
+				CA04D4FA1FC5B8FC001DCD9E /* ViewController.swift in Sources */,
+				CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA04D4FC1FC5B8FC001DCD9E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA04D5041FC5B8FC001DCD9E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA04D5071FC5B8FC001DCD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA04D5081FC5B8FC001DCD9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA04D50A1FC5B8FC001DCD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LD3R48EZL8;
+				INFOPLIST_FILE = LeoSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.408industries.LeoSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA04D50B1FC5B8FC001DCD9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LD3R48EZL8;
+				INFOPLIST_FILE = LeoSync/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.408industries.LeoSync;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA04D4EF1FC5B8FC001DCD9E /* Build configuration list for PBXProject "LeoSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA04D5071FC5B8FC001DCD9E /* Debug */,
+				CA04D5081FC5B8FC001DCD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA04D5091FC5B8FC001DCD9E /* Build configuration list for PBXNativeTarget "LeoSync" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA04D50A1FC5B8FC001DCD9E /* Debug */,
+				CA04D50B1FC5B8FC001DCD9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */,
+			);
+			currentVersion = CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */;
+			path = LeoSync.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CA04D4EC1FC5B8FC001DCD9E /* Project object */;
+}
