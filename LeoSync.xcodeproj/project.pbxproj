@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184F2C6E56BBD871D1683DB6 /* Pods_LeoSync.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BA6F6781D821185E6AF71 /* Pods_LeoSync.framework */; };
 		CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */; };
-		CA04D4FA1FC5B8FC001DCD9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */; };
 		CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */; };
-		CA04D5001FC5B8FC001DCD9E /* LeoSync.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */; };
-		CA04D5021FC5B8FC001DCD9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */; };
 		CA04D5051FC5B8FC001DCD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */; };
+		CA3FD96A1FC5DF200005674F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9691FC5DF200005674F /* LoginViewController.swift */; };
+		CA3FD96C1FC5F1D30005674F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */; };
+		CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */; };
+		CA3FD9761FC5F7F00005674F /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */; };
+		CA3FD9781FC5FA5E0005674F /* UserToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */; };
+		CA3FD97A1FC603180005674F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9791FC603180005674F /* CameraViewController.swift */; };
+		CA71C3BA1FC5BA8C001FB164 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA71C3B91FC5BA8C001FB164 /* GoogleService-Info.plist */; };
+		CADC6B621FC611DD0028DD28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADC6B611FC611CE0028DD28 /* AVFoundation.framework */; };
+		CADC6B631FC611DD0028DD28 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADC6B601FC611CD0028DD28 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A7BA6F6781D821185E6AF71 /* Pods_LeoSync.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeoSync.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C573EC796A8F78E7A08D82 /* Pods-LeoSync.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoSync.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeoSync/Pods-LeoSync.debug.xcconfig"; sourceTree = "<group>"; };
+		B461FE8CF834AC9AA2C47616 /* Pods-LeoSync.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeoSync.release.xcconfig"; path = "Pods/Target Support Files/Pods-LeoSync/Pods-LeoSync.release.xcconfig"; sourceTree = "<group>"; };
 		CA04D4F41FC5B8FC001DCD9E /* LeoSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeoSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA04D4FC1FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LeoSync.xcdatamodel; sourceTree = "<group>"; };
-		CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA04D5041FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA04D5061FC5B8FC001DCD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3FD9691FC5DF200005674F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountTabBarController.swift; sourceTree = "<group>"; };
+		CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToolsViewController.swift; sourceTree = "<group>"; };
+		CA3FD9791FC603180005674F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CA71C3B91FC5BA8C001FB164 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CADC6B601FC611CD0028DD28 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		CADC6B611FC611CE0028DD28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADC6B621FC611DD0028DD28 /* AVFoundation.framework in Frameworks */,
+				CADC6B631FC611DD0028DD28 /* AVKit.framework in Frameworks */,
+				184F2C6E56BBD871D1683DB6 /* Pods_LeoSync.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13725814775A250A63DBA18F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CADC6B611FC611CE0028DD28 /* AVFoundation.framework */,
+				CADC6B601FC611CD0028DD28 /* AVKit.framework */,
+				7A7BA6F6781D821185E6AF71 /* Pods_LeoSync.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA04D4EB1FC5B8FC001DCD9E = {
 			isa = PBXGroup;
 			children = (
 				CA04D4F61FC5B8FC001DCD9E /* LeoSync */,
 				CA04D4F51FC5B8FC001DCD9E /* Products */,
+				F7C613F090762ABC23BF7CD9 /* Pods */,
+				13725814775A250A63DBA18F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,52 @@
 		CA04D4F61FC5B8FC001DCD9E /* LeoSync */ = {
 			isa = PBXGroup;
 			children = (
-				CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */,
-				CA04D4F91FC5B8FC001DCD9E /* ViewController.swift */,
-				CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */,
-				CA04D5011FC5B8FC001DCD9E /* Assets.xcassets */,
-				CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */,
+				CA04D50D1FC5B914001DCD9E /* Controllers */,
+				CA04D50F1FC5B934001DCD9E /* Storyboards */,
+				CA04D50E1FC5B922001DCD9E /* Support */,
+				CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */,
+				CA71C3B91FC5BA8C001FB164 /* GoogleService-Info.plist */,
 				CA04D5061FC5B8FC001DCD9E /* Info.plist */,
-				CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */,
 			);
 			path = LeoSync;
+			sourceTree = "<group>";
+		};
+		CA04D50D1FC5B914001DCD9E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA3FD9691FC5DF200005674F /* LoginViewController.swift */,
+				CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */,
+				CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */,
+				CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */,
+				CA3FD9791FC603180005674F /* CameraViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CA04D50E1FC5B922001DCD9E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		CA04D50F1FC5B934001DCD9E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */,
+				CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F7C613F090762ABC23BF7CD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7C573EC796A8F78E7A08D82 /* Pods-LeoSync.debug.xcconfig */,
+				B461FE8CF834AC9AA2C47616 /* Pods-LeoSync.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA04D5091FC5B8FC001DCD9E /* Build configuration list for PBXNativeTarget "LeoSync" */;
 			buildPhases = (
+				1C2E92A9222EF787A24268D6 /* [CP] Check Pods Manifest.lock */,
 				CA04D4F01FC5B8FC001DCD9E /* Sources */,
 				CA04D4F11FC5B8FC001DCD9E /* Frameworks */,
 				CA04D4F21FC5B8FC001DCD9E /* Resources */,
+				F68BE46FDA2D33389C8CA4DA /* [CP] Embed Pods Frameworks */,
+				C9A95B3AFFE056705098F6E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,21 +198,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA04D5051FC5B8FC001DCD9E /* LaunchScreen.storyboard in Resources */,
-				CA04D5021FC5B8FC001DCD9E /* Assets.xcassets in Resources */,
+				CA71C3BA1FC5BA8C001FB164 /* GoogleService-Info.plist in Resources */,
+				CA3FD96C1FC5F1D30005674F /* Assets.xcassets in Resources */,
 				CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C2E92A9222EF787A24268D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LeoSync-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9A95B3AFFE056705098F6E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoSync/Pods-LeoSync-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F68BE46FDA2D33389C8CA4DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LeoSync/Pods-LeoSync-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LeoSync/Pods-LeoSync-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA04D4F01FC5B8FC001DCD9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA04D5001FC5B8FC001DCD9E /* LeoSync.xcdatamodeld in Sources */,
-				CA04D4FA1FC5B8FC001DCD9E /* ViewController.swift in Sources */,
+				CA3FD9761FC5F7F00005674F /* UserAccountViewController.swift in Sources */,
+				CA3FD96A1FC5DF200005674F /* LoginViewController.swift in Sources */,
+				CA3FD9781FC5FA5E0005674F /* UserToolsViewController.swift in Sources */,
 				CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */,
+				CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */,
+				CA3FD97A1FC603180005674F /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +415,7 @@
 		};
 		CA04D50A1FC5B8FC001DCD9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7C573EC796A8F78E7A08D82 /* Pods-LeoSync.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +431,7 @@
 		};
 		CA04D50B1FC5B8FC001DCD9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B461FE8CF834AC9AA2C47616 /* Pods-LeoSync.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,19 +467,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CA04D4FE1FC5B8FC001DCD9E /* LeoSync.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */,
-			);
-			currentVersion = CA04D4FF1FC5B8FC001DCD9E /* LeoSync.xcdatamodel */;
-			path = LeoSync.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CA04D4EC1FC5B8FC001DCD9E /* Project object */;
 }
