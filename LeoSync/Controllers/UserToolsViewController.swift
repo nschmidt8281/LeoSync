@@ -18,6 +18,8 @@ class UserToolsViewController: UIViewController {
     
     // MARK: Buttons
     @IBAction func btnCamera_TouchUpInside(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "cameraNavigationController")
+        self.present(vc!, animated: true, completion: nil)
     }
     
     @IBAction func btnVideoCamera_TouchUpInside(_ sender: Any) {
@@ -31,7 +33,6 @@ class UserToolsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.title = "LeoSync"
     }
 

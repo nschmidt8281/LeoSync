@@ -11,6 +11,8 @@
 		CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04D4F71FC5B8FC001DCD9E /* AppDelegate.swift */; };
 		CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D4FB1FC5B8FC001DCD9E /* Main.storyboard */; };
 		CA04D5051FC5B8FC001DCD9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */; };
+		CA3D8DF81FD2FA1E00B23DDC /* InterimCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D8DF71FD2FA1E00B23DDC /* InterimCameraViewController.swift */; };
+		CA3D8DFB1FD3247400B23DDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3D8DFA1FD3247400B23DDC /* User.swift */; };
 		CA3FD96A1FC5DF200005674F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9691FC5DF200005674F /* LoginViewController.swift */; };
 		CA3FD96C1FC5F1D30005674F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */; };
 		CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */; };
@@ -31,6 +33,8 @@
 		CA04D4FC1FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA04D5041FC5B8FC001DCD9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA04D5061FC5B8FC001DCD9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA3D8DF71FD2FA1E00B23DDC /* InterimCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterimCameraViewController.swift; sourceTree = "<group>"; };
+		CA3D8DFA1FD3247400B23DDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA3FD9691FC5DF200005674F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountTabBarController.swift; sourceTree = "<group>"; };
@@ -87,7 +91,9 @@
 		CA04D4F61FC5B8FC001DCD9E /* LeoSync */ = {
 			isa = PBXGroup;
 			children = (
+				CA3D8E071FD3686600B23DDC /* Formatting */,
 				CA04D50D1FC5B914001DCD9E /* Controllers */,
+				CA3D8DF91FD3245F00B23DDC /* Models */,
 				CA04D50F1FC5B934001DCD9E /* Storyboards */,
 				CA04D50E1FC5B922001DCD9E /* Support */,
 				CA3FD96B1FC5F1CF0005674F /* Assets.xcassets */,
@@ -105,6 +111,7 @@
 				CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */,
 				CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */,
 				CA3FD9791FC603180005674F /* CameraViewController.swift */,
+				CA3D8DF71FD2FA1E00B23DDC /* InterimCameraViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +131,21 @@
 				CA04D5031FC5B8FC001DCD9E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CA3D8DF91FD3245F00B23DDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CA3D8DFA1FD3247400B23DDC /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA3D8E071FD3686600B23DDC /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Formatting;
 			sourceTree = "<group>";
 		};
 		F7C613F090762ABC23BF7CD9 /* Pods */ = {
@@ -279,7 +301,9 @@
 				CA3FD96A1FC5DF200005674F /* LoginViewController.swift in Sources */,
 				CA3FD9781FC5FA5E0005674F /* UserToolsViewController.swift in Sources */,
 				CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */,
+				CA3D8DFB1FD3247400B23DDC /* User.swift in Sources */,
 				CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */,
+				CA3D8DF81FD2FA1E00B23DDC /* InterimCameraViewController.swift in Sources */,
 				CA3FD97A1FC603180005674F /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
