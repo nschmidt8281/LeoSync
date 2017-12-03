@@ -16,6 +16,7 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
     
     // MARK: Variables
     var storageRef = Storage.storage()
+    var urlRef = Storage.storage()
     var dataRef = Database.database().reference().child("photos")
     
     // MARK: Outlets
@@ -61,32 +62,43 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         } else {
-        let imageData = UIImageJPEGRepresentation(imgPhoto.image!, 0.6)
-        let compressedJPEGImage = UIImage(data: imageData!)
-        UIImageWriteToSavedPhotosAlbum(compressedJPEGImage!, nil, nil, nil)
+            let imageData = UIImageJPEGRepresentation(imgPhoto.image!, 0.2)
+            let compressedJPEGImage = UIImage(data: imageData!)
+            //UIImageWriteToSavedPhotosAlbum(compressedJPEGImage!, nil, nil, nil)
         
-        let uid = String(describing: user.uid)
-        let imageID = String(describing: Int(Date.timeIntervalSinceReferenceDate * 1000))
+            let uid = String(describing: user.uid)
+            let imageID = String(describing: Int(Date.timeIntervalSinceReferenceDate * 1000))
         
-        let imagePath = "photos/\(uid)/\(imageID).jpg"
-        let metadata = StorageMetadata()
-        metadata.contentType = "image/jpeg"
-        
-        self.storageRef.reference().child(imagePath)
-            .putData(imageData!, metadata: metadata) { [weak self] (metadata, error) in
-                if let error = error {
-                    print ("error uploading: \(error)")
-                    return
+            let imagePath = "photos/\(uid)/\(imageID).jpg"
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            let storeImage = self.storageRef.reference().child(imagePath)
+                .putData(imageData!, metadata: metadata) { [weak self] (metadata, error) in
+                    if let error = error {
+                        print ("Uploading Error: \(error)")
+                        return
+                    }
                 }
-        }
+            
+            storeImage.observe(.success) { snapshot in
+                self.urlRef.reference().child(imagePath)
+                    .downloadURL { URL, error in
+                        if let error = error {
+                            print ("URL Error: \(error)")
+                            return
+                        } else {
+                            self.dataRef.child("\(uid)/\(imageID)").setValue(["imageID" : Int("\(imageID)"),
+                                                                              "imagePath" : imagePath,
+                                                                              "imageURL" : "\(URL!)"])
+                        }
+                }
+            }
         
-        self.dataRef.child("\(uid)/\(imageID)").setValue(["imagePath" : imagePath])
+            let ac = UIAlertController(title: "Photo Saved!", message:"The photo was saved successfully!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
         
-        let ac = UIAlertController(title: "Photo Saved!", message:"The photo was saved successfully!", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-        
-        imgPhoto.image = nil
+            imgPhoto.image = nil
         }
     }
     
@@ -111,7 +123,7 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
             present(ac, animated: true, completion: nil)
 
         } else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserAccountHomePage")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "userAccountHomePage")
             self.present(vc!, animated: true, completion: nil)
         }
     }
@@ -128,7 +140,14 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let ref = Database.database().reference()
+        
+        ref.child("users/\(user.uid)").observe(.value, with: { snapshot in
+            let value = snapshot.value as? NSDictionary
+            self.navigationItem.title = value?["company"] as? String
+        })
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -50,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 // Sign in successful -> Go to homepage
                 if user != nil {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "UserAccountHomePage")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "userAccountHomePage")
                     self.present(vc!, animated: true, completion: nil)
                 } else {
                     let alertController = UIAlertController(title: "Registration Failed!", message: (error?.localizedDescription)!, preferredStyle: UIAlertControllerStyle.alert)

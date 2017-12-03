@@ -14,7 +14,7 @@ class UserAccountViewController: UIViewController {
     // MARK: Properties
     let user = Auth.auth().currentUser!
     let dataRef = Database.database().reference()
-    var storageRef = Storage.storage().reference()
+    let storageRef = Storage.storage().reference()
     
     // MARK: Variable
     var admin: Bool = false
@@ -36,6 +36,7 @@ class UserAccountViewController: UIViewController {
         
         dataRef.child("users/\(uid)").observe(.value, with: { snapshot in
             let value = snapshot.value as? NSDictionary
+            self.navigationItem.title = value?["company"] as? String
             
             self.lblUserEmail.text = "User Email: " + (value?["email"] as? String)!
             self.lblUserFirstName.text = "First Name: " + (value?["firstName"] as? String)!
@@ -47,13 +48,11 @@ class UserAccountViewController: UIViewController {
             } else {
                 self.lblUserAdmin.text = "Admin Rights: No"
             }
-            
-            self.navigationItem.title = value?["company"] as? String
         })
         
         let profileImgRef = storageRef.child("profilePhotos/\(uid)/profileImage.png")
         profileImgRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
+            if error != nil {
                 // Error
             } else {
                 let profileImage = UIImage(data: data!)

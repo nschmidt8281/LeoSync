@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class UserToolsViewController: UIViewController {
     
     // MARK: Properties
+    let dataRef = Database.database().reference()
+    let user = Auth.auth().currentUser!
     
     // MARK: Variables
     
@@ -29,27 +32,17 @@ class UserToolsViewController: UIViewController {
     }
     
     @IBAction func btnFiles_TouchUpInside(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mediaNavigationController")
+        self.present(vc!, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "LeoSync"
+        
+        dataRef.child("users/\(user.uid)").observe(.value, with: { snapshot in
+            let value = snapshot.value as? NSDictionary
+            self.navigationItem.title = value?["company"] as? String
+        })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
