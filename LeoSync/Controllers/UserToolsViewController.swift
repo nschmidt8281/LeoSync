@@ -36,6 +36,11 @@ class UserToolsViewController: UIViewController {
         self.present(vc!, animated: true, completion: nil)
     }
     
+    @IBAction func btnSignOut_Touch(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignIn")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

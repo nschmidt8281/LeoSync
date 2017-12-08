@@ -17,7 +17,8 @@ class UserAccountViewController: UIViewController {
     let storageRef = Storage.storage().reference()
     
     // MARK: Variable
-    var admin: Bool = false
+    var userInfo: User?
+    var userProfileImage: UIImage?
     
     // MARK: Outputs
     @IBOutlet weak var imgUserPhoto: UIImageView!
@@ -25,40 +26,67 @@ class UserAccountViewController: UIViewController {
     @IBOutlet weak var lblUserFirstName: UILabel!
     @IBOutlet weak var lblUserLastName: UILabel!
     @IBOutlet weak var lblUserAdmin: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    // MARK: Buttons
+    @IBAction func btnSignOut_Touch(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignIn")
+        self.present(vc!, animated: true, completion: nil)
+    }
+    
     
     // MARK: Methods
     override func viewWillAppear(_ animated: Bool) {
-
-    }
-    
-    override func viewDidLoad() {
         let uid = String(describing: user.uid)
         
         dataRef.child("users/\(uid)").observe(.value, with: { snapshot in
             let value = snapshot.value as? NSDictionary
-            self.navigationItem.title = value?["company"] as? String
             
-            self.lblUserEmail.text = "User Email: " + (value?["email"] as? String)!
-            self.lblUserFirstName.text = "First Name: " + (value?["firstName"] as? String)!
-            self.lblUserLastName.text = "Last Name: " + (value?["lastName"] as? String)!
-            self.admin = (value?["admin"] as? Bool)!
+            let company = (value?["company"] as? String)!
+            let email = (value?["email"] as? String)!
+            let firstName = (value?["firstName"] as? String)!
+            let lastName = (value?["lastName"] as? String)!
+            let admin = (value?["admin"] as? Bool)!
             
-            if self.admin == true {
-                self.lblUserAdmin.text = "Admin Rights: Yes"
-            } else {
-                self.lblUserAdmin.text = "Admin Rights: No"
-            }
+            self.userInfo = User(uid: uid,
+                                 email: email,
+                                 firstName: firstName,
+                                 lastName: lastName,
+                                 company: company,
+                                 admin: admin)
         })
         
         let profileImgRef = storageRef.child("profilePhotos/\(uid)/profileImage.png")
         profileImgRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if error != nil {
-                // Error
+                let errorDesc = error?.localizedDescription
+                if errorDesc == "Object profilePhotos/\(uid)/profileImage.png does not exist." {
+                    let profileImageData = UIImagePNGRepresentation(UIImage(named: "profileImage")!) as Data?
+                    let imagePath = "profilePhotos/\(uid)/profileImage.png"
+                    
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/png"
+                    
+                    self.storageRef.child(imagePath)
+                        .putData(profileImageData!, metadata: metadata) { (metadata, error) in
+                            if let error = error {
+                                print ("Uploading Error: \(error)")
+                                return
+                            }
+                    }
+                    self.userProfileImage = UIImage(named: "profileImage")
+                } else {
+                    return
+                }
             } else {
-                let profileImage = UIImage(data: data!)
-                self.imgUserPhoto.image = profileImage
+                self.userProfileImage = UIImage(data: data!)
+                self.displayContent()
             }
         }
+    }
+    
+    override func viewDidLoad() {
+        self.spinner.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +94,23 @@ class UserAccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func displayContent() {
+        self.spinner.stopAnimating()
+        
+        self.navigationItem.title = self.userInfo?.company
+        
+        self.lblUserEmail.text = "Account Email: " + (userInfo?.email)!
+        self.lblUserFirstName.text = "First Name: " + (userInfo?.firstName)!
+        self.lblUserLastName.text = "Last Name: " + (userInfo?.lastName)!
+        
+        if self.userInfo?.admin == true {
+            self.lblUserAdmin.text = "Admin Rights: Yes"
+        } else {
+            self.lblUserAdmin.text = "Admin Rights: No"
+        }
+        
+        self.imgUserPhoto.image = self.userProfileImage
+    }
 
     /*
     // MARK: - Navigation

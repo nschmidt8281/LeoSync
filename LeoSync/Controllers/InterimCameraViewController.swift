@@ -23,17 +23,6 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var imgPhoto: UIImageView!
     
     // MARK: Buttons
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imgPhoto.image = selectedImage
-        } else {
-            print("Something went wrong")
-        }
-        
-        dismiss(animated:true, completion: nil)
-    }
-    
     @IBAction func btnTakePicture_TouchUpInside(_ sender: Any) {
             let imgPicker = UIImagePickerController()
             imgPicker.delegate = self
@@ -87,7 +76,7 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
                             print ("URL Error: \(error)")
                             return
                         } else {
-                            self.dataRef.child("\(uid)/\(imageID)").setValue(["imageID" : Int("\(imageID)"),
+                            self.dataRef.child("\(uid)/\(imageID)").setValue(["imageID" : Int("\(imageID)")!,
                                                                               "imagePath" : imagePath,
                                                                               "imageURL" : "\(URL!)"])
                         }
@@ -129,6 +118,17 @@ class InterimCameraViewController: UIViewController, UIImagePickerControllerDele
     }
     
     // MARK: Methods
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imgPhoto.image = selectedImage
+        } else {
+            print("Something went wrong")
+        }
+        
+        dismiss(animated:true, completion: nil)
+    }
+    
     func configureStorage() {
         let storageUrl = FirebaseApp.app()?.options.storageBucket
         self.storageRef.reference(forURL: "gs://" + storageUrl!)

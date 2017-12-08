@@ -43,8 +43,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnLogin_TouchUpInside(_ sender: AnyObject?) {
-//        if let email = txtEmail.text, let password = txtPassword.text {
-        let email = "test@test.com", password = "test123"
+        if let email = txtEmail.text, let password = txtPassword.text {
+//        let email = "test@test.com", password = "test123"
             
             Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
                 
@@ -53,12 +53,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "userAccountHomePage")
                     self.present(vc!, animated: true, completion: nil)
                 } else {
-                    let alertController = UIAlertController(title: "Registration Failed!", message: (error?.localizedDescription)!, preferredStyle: UIAlertControllerStyle.alert)
+                    let alertController = UIAlertController(title: "Login Failed", message: (error?.localizedDescription)!, preferredStyle: UIAlertControllerStyle.alert)
                     
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result: UIAlertAction) -> Void in
                     }
                     alertController.addAction(okAction)
                     self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }

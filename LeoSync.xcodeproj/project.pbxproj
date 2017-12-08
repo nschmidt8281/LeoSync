@@ -19,12 +19,16 @@
 		CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */; };
 		CA3FD9761FC5F7F00005674F /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */; };
 		CA3FD9781FC5FA5E0005674F /* UserToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */; };
-		CA3FD97A1FC603180005674F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9791FC603180005674F /* CameraViewController.swift */; };
+		CA3FD97A1FC603180005674F /* Camera1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3FD9791FC603180005674F /* Camera1ViewController.swift */; };
 		CA56C4761FD3BB53008066B5 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56C4751FD3BB53008066B5 /* HeaderCollectionReusableView.swift */; };
 		CA56C4781FD3BC51008066B5 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56C4771FD3BC51008066B5 /* MediaCollectionViewCell.swift */; };
 		CA56C47A1FD3BD33008066B5 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56C4791FD3BD33008066B5 /* MediaCollectionViewController.swift */; };
 		CA56C47C1FD45516008066B5 /* ImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA56C47B1FD45516008066B5 /* ImageInformation.swift */; };
 		CA71C3BA1FC5BA8C001FB164 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA71C3B91FC5BA8C001FB164 /* GoogleService-Info.plist */; };
+		CA8E2B041FD8907A00DCC123 /* MediaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E2B031FD8907A00DCC123 /* MediaDetailViewController.swift */; };
+		CA8E2B061FD89BA100DCC123 /* MediaZoomTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8E2B051FD89BA100DCC123 /* MediaZoomTransitionDelegate.swift */; };
+		CA8EB5661FD8515100291B7E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8EB5641FD8515100291B7E /* CameraViewController.swift */; };
+		CA8EB5671FD8515100291B7E /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA8EB5651FD8515100291B7E /* CameraViewController.xib */; };
 		CADC6B621FC611DD0028DD28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADC6B611FC611CE0028DD28 /* AVFoundation.framework */; };
 		CADC6B631FC611DD0028DD28 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADC6B601FC611CD0028DD28 /* AVKit.framework */; };
 /* End PBXBuildFile section */
@@ -46,12 +50,16 @@
 		CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountTabBarController.swift; sourceTree = "<group>"; };
 		CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
 		CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToolsViewController.swift; sourceTree = "<group>"; };
-		CA3FD9791FC603180005674F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CA3FD9791FC603180005674F /* Camera1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera1ViewController.swift; sourceTree = "<group>"; };
 		CA56C4751FD3BB53008066B5 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		CA56C4771FD3BC51008066B5 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA56C4791FD3BD33008066B5 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
 		CA56C47B1FD45516008066B5 /* ImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformation.swift; sourceTree = "<group>"; };
 		CA71C3B91FC5BA8C001FB164 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA8E2B031FD8907A00DCC123 /* MediaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDetailViewController.swift; sourceTree = "<group>"; };
+		CA8E2B051FD89BA100DCC123 /* MediaZoomTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaZoomTransitionDelegate.swift; sourceTree = "<group>"; };
+		CA8EB5641FD8515100291B7E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CA8EB5651FD8515100291B7E /* CameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		CADC6B601FC611CD0028DD28 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		CADC6B611FC611CE0028DD28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -118,9 +126,12 @@
 			children = (
 				CA3FD9691FC5DF200005674F /* LoginViewController.swift */,
 				CA3FD96F1FC5F5C20005674F /* UserAccountTabBarController.swift */,
+				CA8E2B031FD8907A00DCC123 /* MediaDetailViewController.swift */,
 				CA3FD9751FC5F7F00005674F /* UserAccountViewController.swift */,
+				CA8EB5641FD8515100291B7E /* CameraViewController.swift */,
+				CA8EB5651FD8515100291B7E /* CameraViewController.xib */,
 				CA3FD9771FC5FA5E0005674F /* UserToolsViewController.swift */,
-				CA3FD9791FC603180005674F /* CameraViewController.swift */,
+				CA3FD9791FC603180005674F /* Camera1ViewController.swift */,
 				CA3D8DF71FD2FA1E00B23DDC /* InterimCameraViewController.swift */,
 				CA56C4791FD3BD33008066B5 /* MediaCollectionViewController.swift */,
 			);
@@ -157,6 +168,7 @@
 		CA3D8E071FD3686600B23DDC /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
+				CA8E2B051FD89BA100DCC123 /* MediaZoomTransitionDelegate.swift */,
 				CA56C4751FD3BB53008066B5 /* HeaderCollectionReusableView.swift */,
 				CA56C4771FD3BC51008066B5 /* MediaCollectionViewCell.swift */,
 			);
@@ -238,6 +250,7 @@
 				CA71C3BA1FC5BA8C001FB164 /* GoogleService-Info.plist in Resources */,
 				CA3FD96C1FC5F1D30005674F /* Assets.xcassets in Resources */,
 				CA04D4FD1FC5B8FC001DCD9E /* Main.storyboard in Resources */,
+				CA8EB5671FD8515100291B7E /* CameraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,14 +330,17 @@
 				CA3FD9781FC5FA5E0005674F /* UserToolsViewController.swift in Sources */,
 				CA1114921FD36D5D003ED3A6 /* Photo.swift in Sources */,
 				CA04D4F81FC5B8FC001DCD9E /* AppDelegate.swift in Sources */,
+				CA8E2B061FD89BA100DCC123 /* MediaZoomTransitionDelegate.swift in Sources */,
+				CA8E2B041FD8907A00DCC123 /* MediaDetailViewController.swift in Sources */,
 				CA56C47C1FD45516008066B5 /* ImageInformation.swift in Sources */,
 				CA56C47A1FD3BD33008066B5 /* MediaCollectionViewController.swift in Sources */,
 				CA3D8DFB1FD3247400B23DDC /* User.swift in Sources */,
 				CA3FD9701FC5F5C20005674F /* UserAccountTabBarController.swift in Sources */,
 				CA3D8DF81FD2FA1E00B23DDC /* InterimCameraViewController.swift in Sources */,
 				CA56C4761FD3BB53008066B5 /* HeaderCollectionReusableView.swift in Sources */,
+				CA8EB5661FD8515100291B7E /* CameraViewController.swift in Sources */,
 				CA56C4781FD3BC51008066B5 /* MediaCollectionViewCell.swift in Sources */,
-				CA3FD97A1FC603180005674F /* CameraViewController.swift in Sources */,
+				CA3FD97A1FC603180005674F /* Camera1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

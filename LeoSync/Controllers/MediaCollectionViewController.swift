@@ -23,6 +23,7 @@ class MediaCollectionViewController: UICollectionViewController {
     var images: [UIImage] = []
     var photoCategories = PhotoCategory.fetchPhotos()
     var collectionViewWidth: CGFloat?
+    var selectedIndexPath: IndexPath!
     
     struct Storyboard {
         static let MediaCollectionViewCell = "MediaCollectionViewCell"
@@ -44,7 +45,7 @@ class MediaCollectionViewController: UICollectionViewController {
             self.navigationItem.title = value?["company"] as? String
         })
         
-        dataRef.reference(withPath: "photos/\(user.uid)").queryLimited(toLast: 9).observe(.value, with: { snapshot in
+        dataRef.reference(withPath: "photos/\(user.uid)").queryLimited(toLast: 30).observe(.value, with: { snapshot in
             var newImages: [ImageInformation] = []
             
             for image in snapshot.children {
@@ -103,5 +104,36 @@ class MediaCollectionViewController: UICollectionViewController {
         
         return cell
     }
+    
+    // MARK: - UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as? MediaCollectionViewCell
+        let image = selectedCell?.imgMedia.image
+        self.selectedIndexPath = indexPath
+        self.performSegue(withIdentifier: Storyboard.showDetailSegue, sender: image)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Storyboard.showDetailSegue {
+            let detailVC = segue.destination as! MediaDetailViewController
+            
+            detailVC.image = sender as! UIImage
+        }
+    }
 }
 
+/*
+extension MediaDetailViewController : ZoomingViewController
+{
+    func zoomingBackgroundView(for transition: MediaZoomTransitionDelegate) -> UIView? {
+        return nil
+    }
+    
+    func zoomingImageView(for transition: MediaZoomTransitionDelegate) -> UIImageView? {
+        if let indexPath = selectedIndexPath {
+            let cell = collectionView?.cellForItem(at: indexPath) as! MediaCollectionViewCell
+            return cell.imgMedia
+        }
+    }
+}
+ */

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LeoSync" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LeoSync" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -183,6 +183,12 @@
                                             <constraint firstAttribute="height" constant="150" id="3lb-57-5OO"/>
                                             <constraint firstAttribute="width" constant="150" id="M4T-J0-iO8"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="75"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNf-S9-OpO">
                                         <rect key="frame" x="0.0" y="170" width="375" height="20.5"/>
@@ -222,23 +228,41 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5xH-ya-Jvg">
+                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OIn-55-FtP"/>
+                                    <constraint firstAttribute="width" constant="40" id="RbU-bY-Dew"/>
+                                </constraints>
+                                <color key="color" red="0.12330640107393265" green="0.20877176523208618" blue="0.23624426126480103" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hjf-pq-5At" firstAttribute="top" secondItem="NJO-iT-RGB" secondAttribute="top" constant="50" id="5e3-2h-kLd"/>
                             <constraint firstItem="hjf-pq-5At" firstAttribute="leading" secondItem="NJO-iT-RGB" secondAttribute="leading" id="D6P-wO-MrU"/>
+                            <constraint firstItem="5xH-ya-Jvg" firstAttribute="centerY" secondItem="hGN-2Y-Ttj" secondAttribute="centerY" id="GNU-zN-Jov"/>
                             <constraint firstItem="NJO-iT-RGB" firstAttribute="trailing" secondItem="hjf-pq-5At" secondAttribute="trailing" id="VMO-Gm-po0"/>
+                            <constraint firstItem="5xH-ya-Jvg" firstAttribute="centerX" secondItem="hGN-2Y-Ttj" secondAttribute="centerX" id="X1o-uK-5bW"/>
                             <constraint firstItem="hjf-pq-5At" firstAttribute="centerX" secondItem="hGN-2Y-Ttj" secondAttribute="centerX" id="kWR-3l-lWH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NJO-iT-RGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JLP-tY-vEl"/>
+                    <navigationItem key="navigationItem" id="JLP-tY-vEl">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="zej-pm-5Cf">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnSignOut_Touch:" destination="Ya4-hs-Bny" id="7L3-La-xcn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imgUserPhoto" destination="wTS-8w-vg4" id="Tcb-3F-4WJ"/>
                         <outlet property="lblUserAdmin" destination="KLm-g1-sqk" id="WiV-ih-K3m"/>
                         <outlet property="lblUserEmail" destination="bNf-S9-OpO" id="A8j-Zb-2zj"/>
                         <outlet property="lblUserFirstName" destination="z9z-Oh-Fwm" id="IIB-QQ-IFD"/>
                         <outlet property="lblUserLastName" destination="TU8-WO-u6l" id="6dK-yC-0gz"/>
+                        <outlet property="spinner" destination="5xH-ya-Jvg" id="dgR-Ba-ZOY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eld-ZF-riF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -278,9 +302,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Qb-1V-HpM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-B0-PYN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="cPo-B0-PYN" firstAttribute="top" secondItem="4Qb-1V-HpM" secondAttribute="top" id="4i2-Ry-gqs"/>
+                                    <constraint firstAttribute="bottom" secondItem="cPo-B0-PYN" secondAttribute="bottom" id="Dtz-Md-UqJ"/>
                                     <constraint firstAttribute="width" constant="375" id="NVt-mr-PP5"/>
+                                    <constraint firstAttribute="trailing" secondItem="cPo-B0-PYN" secondAttribute="trailing" id="RTp-ar-t3I"/>
+                                    <constraint firstItem="cPo-B0-PYN" firstAttribute="leading" secondItem="4Qb-1V-HpM" secondAttribute="leading" id="W12-Kf-vbJ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fc-2L-RZ7">
@@ -307,6 +340,7 @@
                         <viewLayoutGuide key="safeArea" id="bwe-46-ygr"/>
                     </view>
                     <connections>
+                        <outlet property="cameraImage" destination="cPo-B0-PYN" id="NBk-On-E1h"/>
                         <outlet property="viewCameraView" destination="4Qb-1V-HpM" id="mW0-nM-1Lu"/>
                     </connections>
                 </viewController>
@@ -537,7 +571,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OKZ-h5-m1q"/>
                     </view>
-                    <navigationItem key="navigationItem" id="011-gB-HJW"/>
+                    <navigationItem key="navigationItem" id="011-gB-HJW">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="VYX-A0-Jw1">
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnSignOut_Touch:" destination="MAe-2B-lLk" id="9hg-7y-Qi9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Acl-da-HhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -547,7 +588,7 @@
         <scene sceneID="ulQ-CE-Qex">
             <objects>
                 <tabBarController storyboardIdentifier="userAccountHomePage" title="UserAccountHomePage" id="Kb9-dR-ory" customClass="UserAccountTabBarController" customModule="LeoSync" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="TabBarImage" itemPositioning="centered" id="AT6-zr-Pw9">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="TabBarImage" id="AT6-zr-Pw9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -606,10 +647,12 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
+                        <outlet property="delegate" destination="YGG-UJ-s0W" id="q5H-mh-siP"/>
                         <segue destination="XWf-TE-TY5" kind="relationship" relationship="rootViewController" id="JjM-Jn-QFj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epm-8u-hsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="YGG-UJ-s0W" customClass="MediaZoomTransitionDelegate" customModule="LeoSync" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1841" y="1888"/>
         </scene>
@@ -658,6 +701,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="kxk-2D-0hD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="YtH-x7-B2M"/>
                         <barButtonItem key="leftBarButtonItem" title="Back" id="QkU-PN-BP5">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -676,7 +720,7 @@
         <!--mediaDetail-->
         <scene sceneID="Ysk-HJ-On6">
             <objects>
-                <viewController title="mediaDetail" id="hII-ww-cUS" sceneMemberID="viewController">
+                <viewController title="mediaDetail" id="hII-ww-cUS" customClass="MediaDetailViewController" customModule="LeoSync" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJD-gh-Gyl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -694,6 +738,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nec-Xn-VNw"/>
                     </view>
+                    <connections>
+                        <outlet property="imgMediaDetail" destination="Pf1-tJ-Wt7" id="kaS-oY-Zlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fM-f7-kE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
